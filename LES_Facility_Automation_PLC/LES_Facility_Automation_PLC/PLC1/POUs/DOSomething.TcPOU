@@ -6,6 +6,7 @@ VAR_INPUT
 	input :BOOL;
 END_VAR
 VAR_OUTPUT
+	turnonAlarm:bool;
 END_VAR
 VAR
 	isDoorOpen : BOOL;
@@ -13,7 +14,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF isDoorOpen THEN
-	//
+	turnonAlarm := true;
 END_IF]]></ST>
     </Implementation>
     <Method Name="method1" Id="{de18747c-8189-46bb-bf3e-9c8d890715bd}">
