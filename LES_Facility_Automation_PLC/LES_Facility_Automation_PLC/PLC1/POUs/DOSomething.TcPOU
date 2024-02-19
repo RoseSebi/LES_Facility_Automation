@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="DOSomething" Id="{0057b8ad-0eae-4e90-bfb0-21f4dbb3901e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK DOSomething
+VAR_INPUT
+	input :BOOL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	isDoorOpen : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF isDoorOpen THEN
+	//
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="method1" Id="{de18747c-8189-46bb-bf3e-9c8d890715bd}">
+      <Declaration><![CDATA[METHOD method1 : BOOL
+VAR_INPUT
+END_VAR
+VAR
+	currentAlarm1State : machineStates;
+	currentAlarm2State : machineStates;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//do something
+case ]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="DOSomething">
+      <LineId Id="9" Count="0" />
+      <LineId Id="11" Count="1" />
+    </LineIds>
+    <LineIds Name="DOSomething.method1">
+      <LineId Id="5" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

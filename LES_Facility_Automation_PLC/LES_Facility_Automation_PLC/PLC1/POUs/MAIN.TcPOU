@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{50d6cc32-61c7-417e-bf3e-2120b9229e9c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	doSomething_instance1: DoSomething;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[doSomething_instance1.method1();
+doSomething_instance1(input := true);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="8" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
